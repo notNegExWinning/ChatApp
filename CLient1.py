@@ -8,14 +8,14 @@ class ChatClient:
 
     def start(self):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.client_socket.connect((self.server_ip, 8000))
+        self.client_socket.connect((self.server_ip, 32973))
         print("Connected to the server.")
 
-        # Start a thread for receiving messages
+        # Create thread for receiving messages
         receive_thread = threading.Thread(target=self.receive_messages)
         receive_thread.start()
 
-        # Start sending messages
+        #Call Send message function
         self.send_messages()
 
     def receive_messages(self):
