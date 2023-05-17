@@ -8,7 +8,7 @@ class Server:
 
     def start(self, ip_address):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server_socket.bind((ip_address, 32973))
+        self.server_socket.bind((ip_address, 32984))
         self.server_socket.listen(5)
 
         print(f"Server started. Listening for connections on {ip_address}...")
@@ -50,4 +50,4 @@ class Server:
 
 if __name__ == "__main__":
     server = Server()
-    server.start("35.208.151.24")
+    server.start("34.125.7.204")
