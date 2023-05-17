@@ -35,5 +35,6 @@ class ChatClient:
         self.client_socket.close()
 
 if __name__ == "__main__":
-    chat_client = ChatClient("localhost")  # Replace with the server's IP address
+    
+    chat_client = ChatClient("35.208.151.24") #Server IP address
     chat_client.start()
